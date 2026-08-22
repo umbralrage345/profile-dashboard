@@ -12,13 +12,13 @@ const contacts = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/abhyudaya-hegde-310a00352/",
     icon: <Linkedin size={22} />,
     color: "hover:text-brand-gold hover:border-brand-gold hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]",
   },
   {
     label: "Email",
-    href: "mailto:your@email.com",
+    href: "mailto:abhyudayamhegde@gmail.com",
     icon: <Mail size={22} />,
     color: "hover:text-brand-red-light hover:border-brand-red hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]",
   },
