@@ -75,22 +75,7 @@ export default function Contact() {
           ))}
         </motion.div>
 
-        {/* Divider / email highlight */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="card-glass inline-block px-8 py-5 rounded-2xl"
-        >
-          <p className="text-gray-500 text-sm mb-1">Prefer email?</p>
-          <a
-            href="mailto:your@email.com"
-            className="text-brand-gold hover:text-brand-gold-light font-mono font-medium transition-colors text-lg"
-          >
-            your@email.com
-          </a>
-        </motion.div>
+
       </div>
     </section>
   );
