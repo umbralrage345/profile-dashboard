@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Mail, Linkedin, Twitter } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 
 const contacts = [
   {
@@ -21,12 +21,6 @@ const contacts = [
     href: "mailto:your@email.com",
     icon: <Mail size={22} />,
     color: "hover:text-brand-red-light hover:border-brand-red hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]",
-  },
-  {
-    label: "Twitter",
-    href: "https://twitter.com",
-    icon: <Twitter size={22} />,
-    color: "hover:text-brand-purple-lighter hover:border-brand-purple-light hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]",
   },
 ];
 
