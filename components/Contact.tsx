@@ -1,81 +1,27 @@
-"use client";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { Github, Mail, Linkedin } from "lucide-react";
-
-const contacts = [
-  {
-    label: "GitHub",
-    href: "https://github.com/umbralrage345",
-    icon: <Github size={22} />,
-    color: "hover:text-brand-purple-light hover:border-brand-purple hover:shadow-[0_0_20px_rgba(124,58,237,0.3)]",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/abhyudaya-hegde-310a00352/",
-    icon: <Linkedin size={22} />,
-    color: "hover:text-brand-gold hover:border-brand-gold hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]",
-  },
-  {
-    label: "Email",
-    href: "mailto:abhyudayamhegde@gmail.com",
-    icon: <Mail size={22} />,
-    color: "hover:text-brand-red-light hover:border-brand-red hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]",
-  },
+const links = [
+  { label: "GitHub", detail: "@umbralrage345", href: "https://github.com/umbralrage345", icon: Github },
+  { label: "LinkedIn", detail: "Connect professionally", href: "https://www.linkedin.com/in/abhyudaya-hegde-310a00352/", icon: Linkedin },
+  { label: "Email", detail: "abhyudayamhegde@gmail.com", href: "mailto:abhyudayamhegde@gmail.com", icon: Mail },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <p className="font-mono text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">
-            04. Contact
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Let&apos;s Connect
-          </h2>
-          <div className="h-1 w-16 mx-auto rounded-full bg-gradient-to-r from-brand-purple to-brand-gold mb-8" />
-          <p className="text-gray-400 text-lg leading-relaxed max-w-xl mx-auto">
-            Whether you want to collaborate on a project, discuss AI/ML ideas,
-            or just say hi — I&apos;d love to hear from you.
-          </p>
-        </motion.div>
-
-        {/* Contact links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {contacts.map((c, i) => (
-            <motion.a
-              key={c.label}
-              href={c.href}
-              target={c.href.startsWith("mailto") ? undefined : "_blank"}
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 * i }}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-full border border-brand-border bg-brand-card/60 text-gray-400 font-medium transition-all duration-300 ${c.color} hover:-translate-y-0.5`}
-            >
-              {c.icon}
-              {c.label}
-            </motion.a>
-          ))}
-        </motion.div>
-
-
+    <section id="contact" className="section-shell contact-section">
+      <div className="contact-heading">
+        <p className="eyebrow">Get in touch <span>03</span></p>
+        <h2>Have something<br />in mind?</h2>
+        <p>I&apos;m open to thoughtful conversations and collaborations.</p>
+      </div>
+      <div className="contact-links">
+        {links.map(({ label, detail, href, icon: Icon }) => (
+          <a key={label} href={href} target={href.startsWith("mailto:") ? undefined : "_blank"} rel="noopener noreferrer">
+            <Icon size={18} strokeWidth={1.7} />
+            <span><strong>{label}</strong><small>{detail}</small></span>
+            <ArrowUpRight size={16} className="contact-arrow" />
+          </a>
+        ))}
       </div>
     </section>
   );
