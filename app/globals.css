@@ -46,7 +46,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .project-row { display: grid; grid-template-columns: 35px minmax(0, 1fr); align-items: start; gap: 14px; padding: 24px; border: 1px solid #49365b; background: #211a29; }
 .project-index, .skill-index { color: #9d8eaa; font: 11px "DM Mono", monospace; }
 .project-copy h3 { margin: 0; font: 600 21px "Manrope", sans-serif; letter-spacing: -.03em; }
+.project-meta { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .project-type { color: #a497b1; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.project-visibility { padding: 3px 6px; border: 1px solid #715b3d; color: #e4c38e; font: 9px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
 .project-copy > p { max-width: 650px; margin: 15px 0 18px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .project-tags li { padding: 5px 9px; border: 1px solid #49365b; color: #c7b8d3; font: 10px "DM Mono", monospace; }
