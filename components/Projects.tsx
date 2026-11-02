@@ -19,14 +19,6 @@ const projects = [
     stack: ["Python", "NumPy", "PCA / SVD", "JavaScript"],
   },
   {
-    name: "PES-VCS",
-    kind: "Systems programming",
-    description:
-      "A Git-inspired version control system in C, implementing content-addressed objects, a staging index, commits, branches, and history traversal.",
-    href: "https://github.com/umbralrage345/PES2UG24AM009-PES-VCS",
-    stack: ["C", "SHA-256", "Filesystem", "Version control"],
-  },
-  {
     name: "Online Auction System",
     kind: "Real-time systems",
     description:
